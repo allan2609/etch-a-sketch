@@ -11,19 +11,25 @@ body * {
   font-family: helvetica, sans-serif;
 }
 
-h1, .buttons {
-  justify-content: center;
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .buttons {
+  justify-content: center;
   gap: 12px;
-  margin-bottom: 12px;
+  margin: 12px;
+}
+
+#squares-number {
+  width: 80px;
 }
 
 .sketchpad {
-  display: flex;
-  height: 1080px;
-  width: 1080px;
+  height: 90vh;
+  width: 90vh;
 }
 
 .column {
@@ -36,7 +42,6 @@ h1, .buttons {
 }
 
 div {
-  outline: 1px solid black;
-  margin-top: 1px;
-  margin-left: 1px;
+  border: 1px solid black;
+  margin: -1px;
 }
