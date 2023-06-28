@@ -7,7 +7,7 @@ drawButton.addEventListener("click", () => {
 });
 
 function draw() {
-  let numberOfSquares = document.querySelector("#squares-number").value;
+  const numberOfSquares = document.querySelector("#squares-number").value;
   for (let i = 0; i < numberOfSquares; i++) {
     let column = document.createElement("div");
     column.className = "column";
@@ -18,6 +18,19 @@ function draw() {
     }
     sketchpad.appendChild(column);
   }
+  createBorders();
+};
+
+function createBorders() {
+  const squares = document.querySelectorAll(".row");
+  const size = squares.length;
+  for (let i = 0; i < size; i++) {
+    let box = squares[i];
+    box.style.borderRight = ("1px solid black");
+    box.style.borderBottom = ("1px solid black");
+    }
+  sketchpad.style.borderTop = ("1px solid black");
+  sketchpad.style.borderLeft = ("1px solid black");
 };
 
 function clear() {

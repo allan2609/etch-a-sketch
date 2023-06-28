@@ -41,7 +41,7 @@ body {
   flex: 1;
 }
 
-div {
-  border: 1px solid black;
-  margin: -1px;
+.row:hover {
+  opacity: 0.15;
+  background-color: orange;
 }
