@@ -28,8 +28,8 @@ body {
 }
 
 .sketchpad {
-  height: 90vh;
-  width: 90vh;
+  height: 90vmin;
+  width: 90vmin;
 }
 
 .column {
