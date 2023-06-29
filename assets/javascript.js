@@ -6,6 +6,10 @@ drawButton.addEventListener("click", () => {
   draw();
 });
 
+sketchpad.addEventListener("click", (e) => {
+  e.target.style.opacity = "0.8";
+});
+
 function draw() {
   const numberOfSquares = document.querySelector("#squares-number").value;
   for (let i = 0; i < numberOfSquares; i++) {
@@ -13,12 +17,14 @@ function draw() {
     column.className = "column";
     for (let j = 0; j < numberOfSquares; j++) {
         let row = document.createElement("div");
+        row.style.backgroundColor = "white";
         row.className = "row";
         column.appendChild(row);
     }
     sketchpad.appendChild(column);
   }
   createBorders();
+  sketchpad.style.backgroundColor = "black";
 };
 
 function createBorders() {
@@ -35,7 +41,7 @@ function createBorders() {
 
 function clear() {
   while (sketchpad.hasChildNodes()) {
-    sketchpad.removeChild(sketchpad.firstChild)
+    sketchpad.removeChild(sketchpad.firstChild);
   }
   document.querySelector("#squares-number").textContent = "";
 };
