@@ -1,6 +1,6 @@
 const sketchpad = document.querySelector(".sketchpad");
 const drawButton = document.querySelector("#drawbutton");
-const output = document.querySelector("#squares-output");
+const size = document.querySelector("#squares-output");
 const slider = document.querySelector("#squares-number");
 const color = document.querySelector("#color");
 
@@ -11,7 +11,7 @@ drawButton.addEventListener("click", () => {
 
 slider.addEventListener("input", () => {
   const userSelection = document.querySelector("#squares-number").value;
-  output.textContent = `Size: ${userSelection}`;
+  size.textContent = `Size: ${userSelection}`;
 });
 
 color.addEventListener("change", changeColor);
@@ -19,7 +19,7 @@ color.addEventListener("change", changeColor);
 function draw() {
   const numberOfSquares = document.querySelector("#squares-number").value;
   const userSelection = document.querySelector("#squares-number").value;
-  output.textContent = `Size: ${userSelection}`;
+  size.textContent = `Size: ${userSelection}`;
   for (let i = 0; i < numberOfSquares; i++) {
     const column = document.createElement("div");
     column.className = "column";
