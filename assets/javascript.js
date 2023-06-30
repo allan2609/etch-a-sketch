@@ -1,9 +1,17 @@
 const sketchpad = document.querySelector(".sketchpad");
 const drawButton = document.querySelector("#drawbutton");
+const output = document.querySelector("#squares-output");
+const slider = document.querySelector("#squares-number");
 
 drawButton.addEventListener("click", () => {
   clear();
   draw();
+});
+
+slider.addEventListener("input", () => {
+  let userSelection = document.querySelector("#squares-number").value;
+  output.textContent = `Number of squares: ${userSelection}`;
+  console.log(userSelection);
 });
 
 sketchpad.addEventListener("click", (e) => {
