@@ -7,7 +7,12 @@ drawButton.addEventListener("click", () => {
 });
 
 sketchpad.addEventListener("click", (e) => {
-  e.target.style.opacity = "0.8";
+  let opacity = Number(e.target.style.opacity);
+  if (opacity > 0) {
+    e.target.style.opacity = opacity - 0.2;
+  } else {
+    e.target.style.opacity = 1;
+  }
 });
 
 function draw() {
@@ -18,6 +23,7 @@ function draw() {
     for (let j = 0; j < numberOfSquares; j++) {
         let row = document.createElement("div");
         row.style.backgroundColor = "white";
+        row.style.opacity = "1";
         row.className = "row";
         column.appendChild(row);
     }

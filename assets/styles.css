@@ -40,8 +40,3 @@ body {
 .row {
   flex: 1;
 }
-
-.row:hover {
-  opacity: 0.15;
-  background-color: orange;
-}
