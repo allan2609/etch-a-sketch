@@ -19,12 +19,21 @@ body {
 
 .buttons {
   justify-content: center;
+  align-items: center;
   gap: 12px;
   margin: 12px;
 }
 
 #squares-number {
-  width: 80px;
+  width: 100px;
+}
+
+#drawbutton {
+  width: 72px;
+  height: 32px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
 }
 
 .sketchpad {

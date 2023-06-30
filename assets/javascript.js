@@ -9,9 +9,8 @@ drawButton.addEventListener("click", () => {
 });
 
 slider.addEventListener("input", () => {
-  let userSelection = document.querySelector("#squares-number").value;
-  output.textContent = `Number of squares: ${userSelection}`;
-  console.log(userSelection);
+  const userSelection = document.querySelector("#squares-number").value;
+  output.textContent = `Squares per side: ${userSelection}`;
 });
 
 sketchpad.addEventListener("click", (e) => {
@@ -25,6 +24,8 @@ sketchpad.addEventListener("click", (e) => {
 
 function draw() {
   const numberOfSquares = document.querySelector("#squares-number").value;
+  const userSelection = document.querySelector("#squares-number").value;
+  output.textContent = `Squares per side: ${userSelection}`;
   for (let i = 0; i < numberOfSquares; i++) {
     let column = document.createElement("div");
     column.className = "column";
@@ -59,3 +60,5 @@ function clear() {
   }
   document.querySelector("#squares-number").textContent = "";
 };
+
+draw();
