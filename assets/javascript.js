@@ -2,7 +2,6 @@ const sketchpad = document.querySelector(".sketchpad");
 const drawButton = document.querySelector("#drawbutton");
 const size = document.querySelector("#squares-output");
 const slider = document.querySelector("#squares-number");
-const color = document.querySelector("#color");
 
 drawButton.addEventListener("click", () => {
   clear();
@@ -14,12 +13,9 @@ slider.addEventListener("input", () => {
   size.textContent = `Size: ${userSelection}`;
 });
 
-color.addEventListener("change", changeColor);
-
 function draw() {
   const numberOfSquares = document.querySelector("#squares-number").value;
-  const userSelection = document.querySelector("#squares-number").value;
-  size.textContent = `Size: ${userSelection}`;
+  size.textContent = `Size: ${numberOfSquares}`;
   for (let i = 0; i < numberOfSquares; i++) {
     const column = document.createElement("div");
     column.className = "column";
@@ -50,17 +46,19 @@ function createBorders() {
 };
 
 function paint(e) {
-  let opacity = Number(e.target.style.opacity);
-  if (opacity > 0) {
+  const opacity = Number(e.target.style.opacity);
+  const color = document.querySelector("#color").value;
+  if (opacity > 0 && color === "#000000") {
     e.target.style.opacity = opacity - 0.2;
-  } else {
+  } else if (opacity <= 0 && color === "#000000") {
     e.target.style.opacity = 0;
+  } else if (color !== "#000000") {
+    e.target.style.opacity = 1;
+    e.target.style.backgroundColor = color;
+  } else {
+    e.target.style.opacity = 1;
+    console.log("Something unexpected happened.")
   }
-};
-
-function changeColor() {
-  const newColor = document.querySelector("#color").value;
-  sketchpad.style.backgroundColor = newColor;
 };
 
 function clear() {
