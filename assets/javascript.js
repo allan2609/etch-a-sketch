@@ -25,7 +25,7 @@ function draw() {
         row.style.opacity = "1";
         row.className = "row";
         row.addEventListener("mouseover", paint);
-        row.addEventListener("touchmove", paint);
+        row.addEventListener("touchstart", paint);
         column.appendChild(row);
     }
     sketchpad.appendChild(column);
