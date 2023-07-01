@@ -18,6 +18,11 @@
       <input type="color" id="color" value="#000000" autocomplete="off">
     </section>
     <section class="sketchpad"></section>
+    <section class="modal-content hidden-modal">
+      <div class="modal-body">Size: </div>
+      <input class="squares-popup" inputmode="numeric" oninput="this.value = this.value.replace(/\D+/g, '')" maxlength="3" autocomplete="off" />
+    </section> 
+    <div class="blur-bg hidden-blur"></div>
   </body>
 
 </html>

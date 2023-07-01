@@ -49,3 +49,41 @@ body {
 .row {
   flex: 1;
 }
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  z-index: 99;
+  background-color: #f1f1f1;
+  padding: 6px;
+  border-radius: 4px;
+  gap: 6px;
+}
+
+.hidden-modal { 
+ display: none; 
+}
+
+.squares-popup {
+  font-size: 18px;
+  background: #f1f1f1;
+  display: flex;
+  width: 48px;
+  align-items: center;
+  justify-content: center;
+}
+
+.blur-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.hidden-blur {
+  display: none;
+}
