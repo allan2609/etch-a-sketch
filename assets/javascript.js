@@ -83,11 +83,7 @@ function sizeEntry() {
   const userInput = document.querySelector(".squares-popup");
   modalContent.classList.remove("hidden-modal");
   blurBg.classList.remove("hidden-blur");
-  if (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) {
-    safariFocus();
-  } else {
-    window.setTimeout(() => userInput.focus(), 0);
-  }
+  window.setTimeout(() => userInput.focus(), 0);
 };
 
 function readSize() {
@@ -122,34 +118,6 @@ function closeModalFunction() {
   console.log("Start function closeModal");
   modalContent.classList.add("hidden-modal");
   blurBg.classList.add("hidden-blur");
-};
-
-function safariFocus() {
-  const userInput = document.querySelector(".squares-popup");
-  // create invisible dummy input to receive the focus first
-  const fakeInput = document.createElement("input");
-  fakeInput.setAttribute("type", "text");
-  fakeInput.style.position = "absolute";
-  fakeInput.style.opacity = 0;
-  fakeInput.style.height = 0;
-  fakeInput.style.fontSize = "16px"; // disable auto zoom
-
-  // you may need to append to another element depending on the browser's auto 
-  // zoom/scroll behavior
-  document.body.prepend(fakeInput);
-
-  // focus so that subsequent async focus will work
-  fakeInput.focus();
-
-  setTimeout(() => {
-
-    // now we can focus on the target input
-    window.setTimeout(() => userInput.focus(), 0);
-
-    // cleanup
-    fakeInput.remove();
-    
-  }, 1000);
 };
 
 blurBg.addEventListener("click", closeModalFunction);
