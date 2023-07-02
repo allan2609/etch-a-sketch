@@ -125,7 +125,7 @@ function closeModalFunction() {
 };
 
 function safariFocus() {
-
+  const userInput = document.querySelector(".squares-popup");
   // create invisible dummy input to receive the focus first
   const fakeInput = document.createElement("input");
   fakeInput.setAttribute("type", "text");
