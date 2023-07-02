@@ -5,7 +5,7 @@ const slider = document.querySelector("#squares-number");
 const modalContent = document.querySelector(".modal-content");
 const blurBg = document.querySelector(".blur-bg");
 const popup = document.querySelector(".squares-popup");
-sketchpad.addEventListener("touchstart", function() {});
+document.addEventListener("touchstart", function(){}, true);
 
 drawButton.addEventListener("click", () => {
   clear();
