@@ -50,12 +50,16 @@ body {
   flex: 1;
 }
 
+.wrapper {
+  position: relative;
+}
+
 .modal-content {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 5%;
-  left: 25%;
+  top: 0;
+  left: 0;
   z-index: 99;
   background-color: #f1f1f1;
   padding: 6px;
@@ -64,7 +68,7 @@ body {
 }
 
 .hidden-modal { 
- display: none; 
+  display: none; 
 }
 
 .squares-popup {
