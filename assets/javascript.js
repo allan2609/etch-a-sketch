@@ -124,3 +124,14 @@ function closeModalFunction() {
 blurBg.addEventListener("click", closeModalFunction);
 
 draw();
+
+const $body = document.querySelector('body');
+
+export default {
+  enable() {
+    $body.style.overflow = 'hidden';
+  },
+  disable() {
+    $body.style.removeProperty('overflow');
+  }
+};
