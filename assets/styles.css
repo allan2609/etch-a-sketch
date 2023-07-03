@@ -15,7 +15,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 .buttons {
@@ -40,9 +39,6 @@ body {
 .sketchpad {
   height: 90vmin;
   width: 90vmin;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none /*only to disable context menu on long press*/
 }
 
 .column {
@@ -52,9 +48,6 @@ body {
 
 .row {
   flex: 1;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none /*only to disable context menu on long press*/
 }
 
 .wrapper {
@@ -98,9 +91,3 @@ body {
 .hidden-blur {
   display: none;
 }
-
-element:hover, element:active {
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-user-select: none;
-  -webkit-touch-callout: none /*only to disable context menu on long press*/
-  }
